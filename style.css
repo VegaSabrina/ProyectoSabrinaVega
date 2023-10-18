@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+}
+header{
+    background-image: url(/Img/Barra\ busqueda.png);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5px;
+}
+.Logo img{
+    height: 69px;
+}
+#BusquedaProducto{
+    padding: 10px 0px;
+    width: 500px;
+    border-radius: 30px;
+    border-color: #ffffff;
+    width: auto;
+}
+.Iconos img{
+    filter: invert(100%) sepia(0%) saturate(26%) hue-rotate(342deg) brightness(105%) contrast(105%);
+    height: 30px;
+}
+.BarraNavegación{
+    background-color: #00425A;
+    font-family: 'Radio Canada', sans-serif;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 10px 0px;;
+}
+.SliderImagen img{
+    width: 100%;
+}
+.BarraNavegación li a{
+    color: white;
+    text-decoration: none;
+    margin:30px;
+}
+.MediosDePago{
+    background-color: #BFDB38;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 10px 20px;
+}
+.MediosDePago img{
+    height:35px;
+    padding-right: 8px;
+}
+.MediosDePago h4{
+    font-family: 'Roboto', sans-serif;
+    font-size:small;
+    margin-bottom: 0px;
+}
+.MediosDePago p{
+    font-family: 'Roboto', sans-serif;
+    font-size:smaller;
+    margin-top: 0px;
+}
+.Carrito,.Tarjetas,.Envios,.Retiro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.CategoriaDestacados h2{
+    margin-top: 0px;
+    padding: 20px 0px;
+    color: white;
+    font-size: medium;
+    font-family: 'Radio Canada', sans-serif;
+    text-align: center;
+    background-color:#00425A;
+    border-radius: 30px;
+    margin:0px 30px 30px 30px;
+}
+.CarruselDestacados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    margin: 30px;
+    font-family:'Roboto', sans-serif;
+}
+.ProductoDestacado{
+    border: black solid 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 19%;
+}
+#CategoriaOfertas h2{
+    margin-top: 0px;
+    padding: 20px 0px;
+    color: white;
+    font-size: medium;
+    font-family: 'Radio Canada', sans-serif;
+    text-align: center;
+    background-color:#00425A;
+    border-radius: 30px;
+    margin:30px;
+}
+.CarruselOfertas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 30px;
+    font-family:'Roboto', sans-serif;
+}
+.ProductoOferta{
+    border: black solid 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 19%;
+}
+.VentaDeProductos h3{
+    color: #00425A;
+    margin: 25px;
+}
+.VentaDeProductos p{
+    font-size: small;
+    margin: 25px;
+}
+.VentaDeProductos img{
+    border-radius: 10px;
+    width: 100%;
+}
+#QuienesSomos{
+    background-color:#FC7300;
+    font-family:'Roboto', sans-serif;
+    font-size: small;
+}
+#Sucursales{
+    background-color:#BFDB38;
+    font-family:'Roboto', sans-serif;
+    font-size: small;
+}
