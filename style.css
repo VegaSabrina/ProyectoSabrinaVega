@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 header{
-    background-image: url(/Img/Barra\ busqueda.png);
+    background-image: url(./Img/Barra\ busqueda.png);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -14,11 +14,10 @@ header{
     height: 69px;
 }
 #BusquedaProducto{
-    padding: 10px 0px;
+    padding: 5px 0px;
     width: 500px;
     border-radius: 30px;
     border-color: #ffffff;
-    width: auto;
 }
 .Iconos img{
     filter: invert(100%) sepia(0%) saturate(26%) hue-rotate(342deg) brightness(105%) contrast(105%);
@@ -34,15 +33,19 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 0px;
-    padding: 10px 0px;;
-}
-.SliderImagen img{
-    width: 100%;
+    padding: 15px 0px;;
 }
 .BarraNavegación li a{
     color: white;
+    margin:10px;
     text-decoration: none;
-    margin:30px;
+}
+/*Animación de link al pasar el cursor por encima*/
+.BarraNavegación a:hover{
+    color:#00425A;
+    background-color: rgb(255, 255, 255, .7);
+    padding: 5px;
+    border-radius: 10px;
 }
 .MediosDePago{
     background-color: #BFDB38;
@@ -52,21 +55,22 @@ header{
     justify-content:space-between;
     align-items: center;
     margin: 0px;
-    padding: 10px 20px;
+    padding: 25px;
 }
 .MediosDePago img{
-    height:35px;
+    height:30px;
     padding-right: 8px;
 }
 .MediosDePago h4{
     font-family: 'Roboto', sans-serif;
-    font-size:small;
     margin-bottom: 0px;
+    font-size: 16px;
+    font-weight:bold;
 }
 .MediosDePago p{
     font-family: 'Roboto', sans-serif;
-    font-size:smaller;
-    margin-top: 0px;
+    font-size:14px;
+    margin: 0px;
 }
 .Carrito,.Tarjetas,.Envios,.Retiro{
     display: flex;
@@ -78,7 +82,7 @@ header{
     margin-top: 0px;
     padding: 20px 0px;
     color: white;
-    font-size: medium;
+    font-size: 16px;
     font-family: 'Radio Canada', sans-serif;
     text-align: center;
     background-color:#00425A;
@@ -98,17 +102,21 @@ header{
     border-radius: 10px;
     box-sizing: border-box;
     width: 19%;
+    transition: 300ms;
+}
+/*Animación producto en sección destacados*/
+.ProductoDestacado:hover{
+    transform: scale(1.1);
 }
 #CategoriaOfertas h2{
-    margin-top: 0px;
+    margin:0px 30px 30px 30px;
     padding: 20px 0px;
     color: white;
-    font-size: medium;
+    font-size: 16px;
     font-family: 'Radio Canada', sans-serif;
     text-align: center;
     background-color:#00425A;
     border-radius: 30px;
-    margin:30px;
 }
 .CarruselOfertas{
     display: flex;
@@ -123,26 +131,182 @@ header{
     border-radius: 10px;
     box-sizing: border-box;
     width: 19%;
+    transition: 300ms;
+}
+/*Animación producto en sección ofertas*/
+.ProductoOferta:hover{
+    transform:scale(1.1);
 }
 .VentaDeProductos h3{
     color: #00425A;
-    margin: 25px;
+    font-size: 22px;
+    margin: 15px;
+    font-weight: bold;
 }
 .VentaDeProductos p{
-    font-size: small;
-    margin: 25px;
+    font-size: 14px;
+    margin: 15px;
 }
 .VentaDeProductos img{
     border-radius: 10px;
     width: 100%;
 }
-#QuienesSomos{
-    background-color:#FC7300;
-    font-family:'Roboto', sans-serif;
-    font-size: small;
+body h2{
+    font-size: 24px;
+    color: #00425A;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: bold;
 }
-#Sucursales{
+body p{
+    font-size: 16px;
+}
+#QuienesSomos{
+    box-sizing: border-box;
+    height: 300px;
     background-color:#BFDB38;
     font-family:'Roboto', sans-serif;
-    font-size: small;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: 300ms;
+}
+/*Animación sección "Quiénes somos"*/
+#QuienesSomos:hover{
+    transform: scale(1.1);
+}
+#QuienesSomos Img{
+    height: 300px;
+}
+#Sucursales{
+    box-sizing: border-box;
+    height: 300px;
+    background-color:#FC7300;
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction:row-reverse;
+    flex-wrap: nowrap;
+    transition: 300ms;
+}
+/*Animación sección "Sucursales"*/
+#Sucursales:hover{
+    transform: scale(1.1)
+}
+.TextoSucursales, .TextoQuienesSomos{
+    padding: 80px;
+}
+#Contacto{
+    background-color: #00425A;
+    color: #ffffff;
+    margin: 0px;
+    font-family:'Roboto', sans-serif;
+}
+#Contacto img{
+    width: 35px;
+    height: 35px;
+    filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(311deg) brightness(107%) contrast(104%);
+}
+#Contacto h5{
+    background-color: rgb(48, 48, 48);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.DatosContacto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:center;
+}
+.DatosContacto p{
+    margin: 0px;
+}
+.Instagram, .Facebook, .WhatsApp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 30px;
+    align-items: center;
+}
+
+
+
+
+/*Estilo para pantalla de dispositivo movil*/
+@media (max-width: 600px){
+    #BusquedaProducto{
+        padding: 0px;
+        width: 200px;
+    }
+    .Iconos img{
+        height: 20px;
+    }
+    .Logo img{
+        height: 49px;
+    }
+    .BarraNavegación li a{
+        font-size: 14px;
+    }
+    .MediosDePago{
+        flex-direction:row;
+        align-items: flex-start;
+    }
+    .MediosDePago img{
+        height: 20px;
+    }
+    .MediosDePago h4{
+        font-size: 12px;
+    }
+    .MediosDePago p{
+        font-size: 12px;
+    }
+    .Carrito,.Tarjetas,.Envios,.Retiro{
+        margin: 0px 5px;
+    }
+    .CategoriaDestacados h2, #CategoriaOfertas h2{
+        font-size: 14px;
+    }
+    .VentaDeProductos h3{
+        font-size: 16px;
+    }
+    .VentaDeProductos p{
+        font-size: 12px;
+    }
+    body h2{
+        font-size: 18px;
+        color: #00425A;
+    }
+    #Contacto h2{
+        color: #ffffff;
+    }
+    body h4{
+        font-size: 8px;
+    }
+    body h5{
+        font-size: 12px;
+    }
+    body p{
+        font-size: 12px;
+    }
+    #QuienesSomos{
+        height: 190px;
+    }
+    #Sucursales{
+        height: 190px;
+    }
+    #QuienesSomos img{
+        width: 190px;
+        height: 190px;
+    }
+    #Sucursales iframe{
+        width: 190px;
+        height: 190px;
+    }
+    .TextoSucursales, .TextoQuienesSomos{
+        padding: 20px;
+    }
+    #Contacto img{
+        height:20px;
+        width: 20px;
+    }
 }
