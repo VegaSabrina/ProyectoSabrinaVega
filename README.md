@@ -4,7 +4,7 @@
 
 ## Secciones
 
-Al acceder a la página principal podremos visualizar un Slider publicitario a modo de carrusel con las ofertas del mes. Posteriormente, se podra visualizar las siguientes secciones:
+Al acceder a la página principal podremos visualizar un Slider publicitario a modo de carrusel con las ofertas del mes. Posteriormente, se podran visualizar las siguientes secciones:
 
 -**Medios de pago**
 
