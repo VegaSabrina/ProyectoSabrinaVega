@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,24 +16,60 @@
 <body>
     <header>
         <div class="Logo">
-            <img src="./Img/Logo patitas.png" alt="LogoPatitas">
+            <img src="./Img/Logo patitas.png" alt="Logo Patitas">
         </div>
-        <div class="BarraBúsqueda">
-            <form>
+        <div class="BarraBusqueda">
                 <label for="Buscar"></label>
-                <input type="text" placeholder="Buscar producto" id="BusquedaProducto">
-            </form>
+                <input type="text" placeholder="Buscar producto" id="BusquedaProducto">  
+                <img src="https://img.icons8.com/ios/50/search--v1.png" onclick="searchProducts()" id="IconoBusqueda" alt="Icono de busqueda">
         </div>
         <div class="Iconos">
-            <img src="https://img.icons8.com/material-sharp/24/user.png" alt="IconoUsuario"/>
-            <img src="https://img.icons8.com/material-sharp/24/shopping-cart.png" alt="IconoCarrito">
+            <div class="Registro">
+                <img src="https://img.icons8.com/material-sharp/24/user.png" id="IconoRegistro" alt="Icono de usuario"/></a>
+                <div class="RegistroForm">
+                    <form>
+                        <div class="DatosRegistro">
+                            <h3>Registro</h3>
+                            <div class="Email">
+                                <label for="email">Correo electrónico</label><br>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="Contraseña">
+                                <label for="contraseña">Ingrese contraseña</label><br>
+                                <input type="password" id="contraseña">
+                            </div>
+                            <div class="Confirmación">
+                                <label for="confirmación">Confirme contraseña</label><br>
+                                <input type="password" id="confirmación">
+                            </div>
+                            <div>
+                            <input type="checkbox" id="Novedades">Acepto recibir novedades y promociones via mail.
+                            </div>
+                            <input type="submit" value="enviar" id="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="Carrito">
+                <img src="https://img.icons8.com/material-sharp/24/shopping-cart.png" id="IconoCarrito" alt="Icono de carrito">
+                <div class="DesplegableCarrito">
+                    <h3>Carrito</h3>
+                    <div id="DatosCarrito">
+                        <div id="carrito-contenido">
+                            <ul id="carrito-lista">
+                            </ul>
+                            <p>Total: $<span id="total">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <nav>
-        <ul class="BarraNavegación">
-            <li><a href="https://www.facebook.com/">Perros</a></li>
-            <li><a href="">Gatos</a></li>
+        <ul class="BarraNavegacion">
+            <li><a href="./perros.html">Perros</a></li>
+            <li><a href="./gatos.html">Gatos</a></li>
             <li><a href="#CategoriaOfertas">Ofertas</a></li>
             <li><a href="#QuienesSomos">Quienes Somos</a></li>
             <li><a href="#Sucursales">Sucursales</a></li>
@@ -51,10 +87,10 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./Img/Slider.png" class="d-block w-100" alt="...">
+                <img src="./Img/Slider.png" class="d-block w-100" alt="Slider promo indumentaria">
               </div>
               <div class="carousel-item">
-                <img src="./Img/Slider1.png" class="d-block w-100" alt="...">
+                <img src="./Img/Slider1.png" class="d-block w-100" alt="Slider promo juguetes">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -69,7 +105,7 @@
         <section class="MediosDePago">
             <div class="Carrito">
                 <div>
-                    <img src="https://img.icons8.com/ios/50/buy--v1.png" alt="buy--v1"/>
+                    <img src="https://img.icons8.com/ios/50/buy--v1.png" alt="Icono carrito"/>
                 </div>
                 <div>
                     <h4>Elegí tus productos</h4>
@@ -78,7 +114,7 @@
             </div>
             <div class="Tarjetas">
                 <div>
-                    <img src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="bank-card-back-side--v1"/>
+                    <img src="https://img.icons8.com/ios/50/bank-card-back-side--v1.png" alt="Icono tarjetas"/>
                 </div>
                 <div>
                     <h4>Aboná facilmente</h4>
@@ -87,7 +123,7 @@
             </div>
             <div class="Envios">
                 <div>
-                    <img src="https://img.icons8.com/ios/50/in-transit--v1.png" alt="in-transit--v1"/>
+                    <img src="https://img.icons8.com/ios/50/in-transit--v1.png" alt="Icono envios"/>
                 </div>
                 <div>
                     <h4>Nosotros nos encargamos de todo</h4>
@@ -96,7 +132,7 @@
             </div>
             <div class="Retiro">
                 <div>
-                    <img src="https://img.icons8.com/ios/50/shop--v1.png" alt="shop--v1"/>
+                    <img src="https://img.icons8.com/ios/50/shop--v1.png" alt="Icono retiro en tienda"/>
                 </div>
                 <div>
                     <h4>Si lo preferis, acercate a nuestras tiendas</h4>
@@ -109,29 +145,34 @@
                     <h2>Productos destacados</h2>
                 <div class="CarruselDestacados">
                     <div class="ProductoDestacado">
-                        <img src="./Img/Producto 1 destacado.jpg" al="Producto1"/>
+                        <img src="./Img/1.jpg" alt="Alimento para perro"/>
                         <h3>$22.500</h3>
                         <p>Alimento para perros 15 kg adultos</p>
+                        <button class="add-to-cart" data-price="22500" data-name="Alimento para perros 15 kg adultos">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoDestacado">
-                        <img src="./Img/Producto 2 destacado.jpg" al="Producto1"/>
+                        <img src="./Img/2.jpg" alt="Camita para perro"/>
                         <h3>$15.800</h3>
                         <p>Camita para perros 100cm de diámetro</p>
+                        <button class="add-to-cart" data-price="15800" data-name="Camita para perros 100cm de diámetro">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoDestacado">
-                        <img src="./Img/Producto 3 destacado.jpg" al="Producto1"/>
+                        <img src="./Img/3.jpg" alt="Juguete para perros"/>
                         <h3>$5.700</h3>
-                        <p>Juguete mediano de goma para perros varios colores</p>
+                        <p>Juguete de goma para perros</p>
+                        <button class="add-to-cart" data-price="5700" data-name="Juguete mediano de goma para perros varios colores">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoDestacado">
-                        <img src="./Img/Producto 4 destacado.jpg" al="Producto1"/>
+                        <img src="./Img/4.jpg" alt="Campera impermeable perro"/>
                         <h3>$11.500</h3>
-                        <p>Campera impermeable con capucha para perros</p>
+                        <p>Campera impermeable para perros</p>
+                        <button class="add-to-cart" data-price="11500" data-name="Campera impermeable con capucha para perros">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoDestacado">
-                        <img src="./Img/Producto 5 destacado.jpg" al="Producto1"/>
+                        <img src="./Img/5.jpg" alt="Alimento para gatos"/>
                         <h3>$24.600</h3>
                         <p>Alimento para gatos 15 kg adultos</p>
+                        <button class="add-to-cart" data-price="24600" data-name="Alimento para gatos 15 kg adultos">AÑADIR A CARRITO</button>
                     </div>
                  </div>
             </div>
@@ -140,29 +181,34 @@
                     <h2>Ofertas del mes</h2>
                 <div class="CarruselOfertas">
                     <div class="ProductoOferta">
-                        <img src="./Img/Producto 1 oferta.jpg" al="Producto1"/>
+                        <img src="./Img/6.jpg" alt="Buzo Harry Potter perro"/>
                         <h3>$12.500</h3>
                         <p>Buzo Harry Potter con bufanda</p>
+                        <button class="add-to-cart" data-price="12500" data-name="Buzo Harry Potter perro">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoOferta">
-                        <img src="./Img/Producto 2 oferta.jpg" al="Producto1"/>
+                        <img src="./Img/7.jpg" alt="Campera deportiva perro"/>
                         <h3>$8.300</h3>
                         <p>Campera deportiva con capucha</p>
+                        <button class="add-to-cart" data-price="8300" data-name="Campera deportiva perro">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoOferta">
-                        <img src="./Img/Producto 3 oferta.jpg" al="Producto1"/>
+                        <img src="./Img/8.jpg" alt="Abrigo a cuadros gato"/>
                         <h3>$8.700</h3>
                         <p>Abrigo a cuadros color celeste</p>
+                        <button class="add-to-cart" data-price="8700" data-name="Abrigo a cuadros color celeste">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoOferta">
-                        <img src="./Img/Producto 4 oferta.jpg" al="Producto1"/>
+                        <img src="./Img/9.jpg" alt="Sueter de lana perro"/>
                         <h3>$10.200</h3>
                         <p>Sueter de lana color azul</p>
+                        <button class="add-to-cart" data-price="10200" data-name="Sueter de lana color azul">AÑADIR A CARRITO</button>
                     </div>
                     <div class="ProductoOferta">
-                        <img src="./Img/Producto 5 oferta.jpg" al="Producto1"/>
+                        <img src="./Img/10.jpg" alt="Capa Naruto gato"/>
                         <h3>$11.500</h3>
                         <p>Capa Naruto con lazo</p>
+                        <button class="add-to-cart" data-price="11500" data-name="Capa Naruto con lazo">AÑADIR A CARRITO</button>
                     </div>
                 </div>
             </div>
@@ -172,7 +218,7 @@
                 <h2>Quiénes Somos</h2>
                 <p>Somos una tienda de mascotas especializada en accesorios, alimentos e indumentaria para perros y gatos. Tenemos una gran selección de productos originales y divertidos, para mimar a tu mascota de la mejor manera.</p>
             </div>
-            <img src="./Img/Logo en pañuelo.jpg" alt="PerritoConLogo">
+            <img src="./Img/Logo en pañuelo.jpg" alt="Perrito con pañuelo">
         </section>
         <section id="Sucursales">
             <div class="TextoSucursales">
@@ -199,6 +245,7 @@
         </div>
         <h5>® Patitas Pet Shop Todos los derechos reservados</h5>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="./main.js"></script>
 </body>
 </html>

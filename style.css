@@ -1,6 +1,13 @@
 body{
     margin: 0;
 }
+body p{
+    font-size: 16px;
+}
+
+
+
+/*Barra de búsqueda*/
 header{
     background-image: url(./Img/Barra\ busqueda.png);
     display: flex;
@@ -14,16 +21,111 @@ header{
     height: 69px;
 }
 #BusquedaProducto{
-    padding: 5px 0px;
+    padding: 5px 15px;
     width: 500px;
     border-radius: 30px;
     border-color: #ffffff;
 }
+#IconoBusqueda{
+    width: 25px;
+    position: relative;
+    right: 40px;
+    cursor: pointer;
+}
+.Iconos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .Iconos img{
     filter: invert(100%) sepia(0%) saturate(26%) hue-rotate(342deg) brightness(105%) contrast(105%);
     height: 30px;
+    margin: 10px;
 }
-.BarraNavegación{
+#IconoRegistro:hover{
+    filter: invert(64%) sepia(68%) saturate(5084%) hue-rotate(0deg) brightness(99%) contrast(107%);
+    cursor: pointer;
+}
+#IconoCarrito:hover{
+    filter: invert(64%) sepia(68%) saturate(5084%) hue-rotate(0deg) brightness(99%) contrast(107%);
+    cursor: pointer;
+}
+
+
+/*Formulario de registro*/
+.RegistroForm{
+    display: none;
+    position:absolute;
+    z-index: 1000;
+    top:70px;
+    right: 50px;
+    background-color: #BFDB38;
+    box-sizing: border-box;
+    width: 240px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+}
+.DatosRegistro h3{
+    font-family:'Radio Canada', sans-serif;
+}
+.DatosRegistro{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#email, #contraseña, #confirmación{
+    border-radius: 10px;
+    width: 200px;
+    border: solid #ffffff 1px;
+}
+#Enviar{
+    color: #00425A;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid #00425A 1px;
+    margin-top: 10px;
+}
+#Enviar:hover{
+    background-color: #FC7300;
+    color: white;
+    border: none;
+}
+
+
+
+/*Despegable carrito*/
+.DesplegableCarrito{
+    display: none;
+    position:absolute;
+    z-index: 1000;
+    top: 70px;
+    right: 15px;
+    background-color: #BFDB38;
+    box-sizing: border-box;
+    width: 240px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+}
+.DesplegableCarrito h3{
+    font-family:'Radio Canada', sans-serif;
+    margin: 20PX;
+}
+#DatosCarrito{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+/*Barra de navegación*/
+.BarraNavegacion{
     background-color: #00425A;
     font-family: 'Radio Canada', sans-serif;
     list-style: none;
@@ -35,18 +137,140 @@ header{
     margin: 0px;
     padding: 15px 0px;;
 }
-.BarraNavegación li a{
+.BarraNavegacion li a{
     color: white;
     margin:10px;
     text-decoration: none;
 }
 /*Animación de link al pasar el cursor por encima*/
-.BarraNavegación a:hover{
+.BarraNavegacion a:hover{
     color:#00425A;
     background-color: rgb(255, 255, 255, .7);
     padding: 5px;
     border-radius: 10px;
 }
+
+
+
+/*Sección perros de barra de navegación*/
+.TiendaPerros{
+    display: flex;
+    flex-direction: row;
+  }
+.SeccionPerros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family:'Roboto', sans-serif;
+}
+.FiltroCategoria{
+    margin: 15px;
+}
+.FiltroCheck{
+    font-size: 14px;
+}
+.ProductoPerro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 300ms;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin: 10px;
+    background-color: white;
+ }
+ /*Animación producto en sección perros*/
+
+ .ProductoPerro:hover{
+     transform: scale(1.1);
+ }
+ .ProductoPerro button{
+     margin: 5px 15px 10px 15px;
+     border-radius: 10px;
+     border: 1px solid #00425A;
+     color: #00425A;
+ }
+ .ProductoPerro button:hover{
+     background-color: #FC7300;
+     border: #FC7300;
+     color: white;
+ }
+.SeccionPerros h3{
+    color: #00425A;
+    font-size: 22px;
+    margin: 15px;
+    font-weight: bold;
+}
+.SeccionPerros p{
+    font-size: 14px;
+    margin: 15px;
+}
+.SeccionPerros img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+/*Sección gatos de barra de navegación*/
+.TiendaGatos{
+    display: flex;
+    flex-direction: row;
+  }
+.SeccionGatos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family:'Roboto', sans-serif;
+}
+.FiltroCategoria{
+    margin: 15px;
+}
+.FiltroCheck{
+    font-size: 14px;
+}
+.ProductoGato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 300ms;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin: 10px;
+    background-color: white;
+ }
+ /*Animación producto en sección gatos*/
+
+ .ProductoGato:hover{
+     transform: scale(1.1);
+ }
+ .ProductoGato button{
+     margin: 5px 15px 10px 15px;
+     border-radius: 10px;
+     border: 1px solid #00425A;
+     color: #00425A;
+ }
+ .ProductoGato button:hover{
+     background-color: #FC7300;
+     border: #FC7300;
+     color: white;
+ }
+.SeccionGatos h3{
+    color: #00425A;
+    font-size: 22px;
+    margin: 15px;
+    font-weight: bold;
+}
+.SeccionGatos p{
+    font-size: 14px;
+    margin: 15px;
+}
+.SeccionGatos img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+/*Sección medios de pago*/
 .MediosDePago{
     background-color: #BFDB38;
     display: flex;
@@ -78,6 +302,10 @@ header{
     flex-wrap: wrap;
     align-items: center;
 }
+
+
+
+/*Sección productos destacados*/
 .CategoriaDestacados h2{
     margin-top: 0px;
     padding: 20px 0px;
@@ -87,27 +315,43 @@ header{
     text-align: center;
     background-color:#00425A;
     border-radius: 30px;
-    margin:0px 30px 30px 30px;
+    margin:0px 30px;
 }
 .CarruselDestacados{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content: space-between;
-    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px 10px;
     font-family:'Roboto', sans-serif;
 }
 .ProductoDestacado{
-    border: black solid 1px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    width: 19%;
-    transition: 300ms;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: 5px;
+   transition: 300ms;
+   border-radius: 10px;
+   border: 1px solid grey;
+   background-color: white;
 }
 /*Animación producto en sección destacados*/
 .ProductoDestacado:hover{
     transform: scale(1.1);
 }
+.ProductoDestacado button{
+    margin: 5px 15px 15px 15px;
+    border-radius: 10px;
+    border: 1px solid #00425A;
+    color: #00425A;
+}
+.ProductoDestacado button:hover{
+    background-color: #FC7300;
+    border: #FC7300;
+    color: white;
+}
+
+
+
+/*Sección productos en oferta*/
 #CategoriaOfertas h2{
     margin:0px 30px 30px 30px;
     padding: 20px 0px;
@@ -119,24 +363,36 @@ header{
     border-radius: 30px;
 }
 .CarruselOfertas{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 30px 10px;
     font-family:'Roboto', sans-serif;
 }
 .ProductoOferta{
-    border: black solid 1px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    width: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: 300ms;
-}
-/*Animación producto en sección ofertas*/
-.ProductoOferta:hover{
-    transform:scale(1.1);
-}
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    margin: 5px;
+ }
+ /*Animación producto en sección ofertas*/
+ .ProductoOferta:hover{
+     transform: scale(1.1);
+ }
+ .ProductoOferta button{
+     margin: 5px 15px 15px 15px;
+     border-radius: 10px;
+     border: 1px solid #00425A;
+     color: #00425A;
+ }
+ .ProductoOferta button:hover{
+     background-color: #FC7300;
+     border: #FC7300;
+     color: white;
+ }
 .VentaDeProductos h3{
     color: #00425A;
     font-size: 22px;
@@ -157,18 +413,20 @@ body h2{
     font-family: 'Radio Canada', sans-serif;
     font-weight: bold;
 }
-body p{
-    font-size: 16px;
-}
+
+
+
+
+/*Sección quiénes somos*/
 #QuienesSomos{
-    box-sizing: border-box;
-    height: 300px;
-    background-color:#BFDB38;
+    color: white;
+    background: linear-gradient(#b7cf3c, #b4d607);
     font-family:'Roboto', sans-serif;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     transition: 300ms;
+    align-items: center;
 }
 /*Animación sección "Quiénes somos"*/
 #QuienesSomos:hover{
@@ -177,23 +435,30 @@ body p{
 #QuienesSomos Img{
     height: 300px;
 }
+
+
+
+/*Sección sucursales*/
 #Sucursales{
-    box-sizing: border-box;
-    height: 300px;
-    background-color:#FC7300;
+    color: white;
+    background: linear-gradient(#fd8828, #e26601);
     font-family:'Roboto', sans-serif;
     display: flex;
     flex-direction:row-reverse;
     flex-wrap: nowrap;
     transition: 300ms;
+    align-items: center;
 }
 /*Animación sección "Sucursales"*/
 #Sucursales:hover{
     transform: scale(1.1)
 }
-.TextoSucursales, .TextoQuienesSomos{
-    padding: 80px;
+.TextoQuienesSomos,.TextoSucursales{
+    padding: 20px;
 }
+
+
+/*Footer sección contacto*/
 #Contacto{
     background-color: #00425A;
     color: #ffffff;
@@ -201,8 +466,8 @@ body p{
     font-family:'Roboto', sans-serif;
 }
 #Contacto img{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(311deg) brightness(107%) contrast(104%);
 }
 #Contacto h5{
@@ -228,15 +493,21 @@ body p{
     margin: 30px;
     align-items: center;
 }
+footer h5{
+    margin-bottom: 0px
+}
 
 
 
 
-/*Estilo para pantalla de dispositivo movil*/
-@media (max-width: 600px){
+/*Estilo para pantalla de dispositivo smartphone grande 720 x 1280 px*/
+@media (max-width: 720px){
     #BusquedaProducto{
         padding: 0px;
         width: 200px;
+    }
+    #IconoBusqueda{
+        width: 15px;
     }
     .Iconos img{
         height: 20px;
@@ -244,8 +515,33 @@ body p{
     .Logo img{
         height: 49px;
     }
-    .BarraNavegación li a{
-        font-size: 14px;
+    .BarraNavegacion li a{
+        font-size: 12px;
+    }
+    .TiendaPerros,.TiendaGatos{
+        display: flex;
+        flex-direction: column;
+    }
+    .FiltroCategoria{
+        display: flex;
+        flex-direction: column;
+      }
+    .FiltroCheck{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 5px;
+    }
+    .FiltroCategoria{
+        font-size: 12px;
+    }
+    .ProductoPerro p,.ProductoGato p{
+        font-size: 12px;
+    }
+    .ProductoPerro button,.ProductoGato button{
+        font-size: 12px;
+        margin: 6px 12px;   
     }
     .MediosDePago{
         flex-direction:row;
@@ -265,6 +561,12 @@ body p{
     }
     .CategoriaDestacados h2, #CategoriaOfertas h2{
         font-size: 14px;
+    }
+    .ProductoDestacado button{
+        font-size: 12px;
+    }
+    .ProductoOferta button{
+        font-size: 12px;
     }
     .VentaDeProductos h3{
         font-size: 16px;
@@ -288,25 +590,66 @@ body p{
     body p{
         font-size: 12px;
     }
-    #QuienesSomos{
-        height: 190px;
+    #QuienesSomos, #Sucursales{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
-    #Sucursales{
-        height: 190px;
-    }
-    #QuienesSomos img{
-        width: 190px;
-        height: 190px;
-    }
-    #Sucursales iframe{
-        width: 190px;
-        height: 190px;
-    }
-    .TextoSucursales, .TextoQuienesSomos{
-        padding: 20px;
+    #QuienesSomos img, #Sucursales iframe{
+        width: 100%;
+        height: 100%;
     }
     #Contacto img{
         height:20px;
         width: 20px;
+    }
+}
+
+
+
+/*Estilo para pantalla de dispositivo smartphone pequeño 375 x 667 px*/
+@media (max-width: 375px){
+    #BusquedaProducto{
+        width: 130px;
+        font-size: 14px;
+    }
+    #IconoBusqueda{
+        display: none;
+    }
+    .BarraNavegacion li a{
+        font-size: 10px;
+    }
+    .FiltroCheck{
+        display: inline;
+        align-items: flex-start;
+    }
+    .SeccionPerros,.SeccionGatos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-family:'Roboto', sans-serif;
+    }
+    .CarruselDestacados,.CarruselOfertas{
+        display: flex;
+        flex-direction: column;
+    }
+    .ProductoDestacado,.ProductoOferta{
+        margin-bottom: 10px;
+    }
+    .ProductoDestacado h3, .ProductoOferta h3{
+        font-size: 24px;
+    }
+    .ProductoDestacado p, .ProductoOferta p{
+        font-size: 12px;
+    }
+    .ProductoDestacado button, .ProductoOferta button{
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .DatosContacto{
+        display: flex;
+        flex-direction: column;
+    }
+    .Instagram,.Facebook,.WhatsApp{
+        margin: 15px;
     }
 }

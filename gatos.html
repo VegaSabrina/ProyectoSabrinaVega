@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas PetShop</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <a href="./index.html"><img src="./Img/Logo patitas.png" alt="LogoPatitas"></a>
+        </div>
+        <div class="BarraBusqueda">
+            <label for="Buscar"></label>
+            <input type="text" placeholder="Buscar producto" id="BusquedaProducto">
+            <img src="https://img.icons8.com/ios/50/search--v1.png" onclick="searchProducts()" id="IconoBusqueda" alt="Icono de busqueda">
+        </div>
+        <div class="Iconos">
+            <div class="Registro">
+                <img src="https://img.icons8.com/material-sharp/24/user.png" id="IconoRegistro" alt="Icono de usuario"/></a>
+                <div class="RegistroForm">
+                    <form>
+                        <div class="DatosRegistro">
+                            <h3>Registro</h3>
+                            <div class="Email">
+                                <label for="email">Correo electrónico</label><br>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="Contraseña">
+                                <label for="contraseña">Ingrese contraseña</label><br>
+                                <input type="password" id="contraseña">
+                            </div>
+                            <div class="Confirmación">
+                                <label for="confirmación">Confirme contraseña</label><br>
+                                <input type="password" id="confirmación">
+                            </div>
+                            <div>
+                            <input type="checkbox" id="Novedades">Acepto recibir novedades y promociones via mail.
+                            </div>
+                            <input type="submit" value="enviar" id="Enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="Carrito">
+                <img src="https://img.icons8.com/material-sharp/24/shopping-cart.png" id="IconoCarrito" alt="Icono de carrito">
+                <div class="DesplegableCarrito">
+                    <h3>Carrito</h3>
+                    <div id="DatosCarrito">
+                        <div id="carrito-contenido">
+                            <ul id="carrito-lista">
+                            </ul>
+                            <p>Total: $<span id="total">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="BarraNavegacion">
+            <li><a href="./perros.html">Perros</a></li>
+            <li><a href="./gatos.html">Gatos</a></li>
+            <li><a href="./index.html#CategoriaOfertas">Ofertas</a></li>
+            <li><a href="./index.html#QuienesSomos">Quienes Somos</a></li>
+            <li><a href="./index.html#Sucursales">Sucursales</a></li>
+            <li><a href="./index.html#Contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="TiendaGatos">
+            <div class="FiltroCategoria">
+                <h3>Gatos</h3>
+                <hr>
+                <h5>Filtro por categoria</h5>
+                <div class="FiltroCheck">
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta1">Indumentaria<br>
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta2">Alimentos<br>
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta3">Camas<br>
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta4">Juguetes<br>
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta5">Comederos<br>
+                <input type="checkbox" class="filtro-tarjeta" data-target="tarjeta6">Snacks para mascota
+                </div>
+                <hr>
+            </div>
+        <section class="SeccionGatos">
+                <div class="ProductoGato" id="tarjeta2">
+                    <img src="./Img/5.jpg" alt="Alimento para gatos"/>
+                    <h3>$24.600</h3>
+                    <p>Alimento para gatos 15 kg adultos</p>
+                    <button class="add-to-cart" data-price="24600" data-name="Alimento para gatos 15 kg adultos">AÑADIR A CARRITO</button>
+                </div>
+                 <div class="ProductoGato" id="tarjeta1">
+                    <img src="./Img/8.jpg" alt="Abrigo a cuadros"/>
+                    <h3>$8.700</h3>
+                        <p>Abrigo a cuadros color celeste</p>
+                    <button class="add-to-cart" data-price="8700" data-name="Abrigo a cuadros color celeste">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta1">
+                    <img src="./Img/10.jpg" alt="Capa Naruto"/>
+                    <h3>$11.500</h3>
+                    <p>Capa Naruto con lazo</p>
+                    <button class="add-to-cart" data-price="11500" data-name="Capa Naruto con lazo">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta4">
+                    <img src="./Img/16.jpg" alt="Juguete ratón"/>
+                    <h3>$3.600</h3>
+                    <p>Juguete ratón multicolor</p>
+                    <button class="add-to-cart" data-price="3600" data-name="Juguete ratón multicolor">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta5">
+                    <img src="./Img/17.jpg" alt="Comedero plástico"/>
+                    <h3>$4.200</h3>
+                    <p>Comedero plastico varios colores</p>
+                    <button class="add-to-cart" data-price="4200" data-name="Comedero plastico varios colores">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta3">
+                    <img src="./Img/18.jpg" alt="Cama con corderito"/>
+                    <h3>$10.300</h3>
+                    <p>Cama para gatos con corderito</p>
+                    <button class="add-to-cart" data-price="10300" data-name="Cama para gatos con corderito">AÑADIR A CARRITO</button>
+                </div>
+                 <div class="ProductoGato" id="tarjeta4">
+                    <img src="./Img/19.jpg" alt="Juguete de pez"/>
+                    <h3>$2600</h3>
+                    <p>Juguete de pez con listón</p>
+                    <button class="add-to-cart" data-price="2600" data-name="Juguete de pez con listón">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta6">
+                    <img src="./Img/20.jpg" alt="Snack limpiador"/>
+                    <h3>$1.200</h3>
+                    <p>Snack limpiador de dientes</p>
+                    <button class="add-to-cart" data-price="1200" data-name="Snack limpiador de dientes">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta1">
+                    <img src="./Img/21.jpg" alt="Sueter multicolor"/>
+                    <h3>$8600</h3>
+                    <p>Sueter multicolor varios talles</p>
+                    <button class="add-to-cart" data-price="8600" data-name="Sueter multicolor varios talles">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta5">
+                    <img src="./Img/22.jpg" alt="Comedero doble metálico"/>
+                    <h3>$4.700</h3>
+                    <p>Comedero doble metálico color azul</p>
+                    <button class="add-to-cart" data-price="4700" data-name="Comedero doble metálico color azul">AÑADIR A CARRITO</button>
+                </div>
+                <div class="ProductoGato" id="tarjeta1">
+                    <img src="./Img/23.jpg" alt="Disfraz de pirata"/>
+                    <h3>$10.400</h3>
+                    <p>Disfraz de pirata con sombrero</p>
+                    <button class="add-to-cart" data-price="10400" data-name="Disfraz de pirata con sombrero">AÑADIR A CARRITO</button>
+                </div>
+                 <div class="ProductoGato" id="tarjeta4">
+                    <img src="./Img/24.jpg" alt="Set de entretenimiento"/>
+                    <h3>$10.300</h3>
+                    <p>Set de entretenimiento rascador para gato</p>
+                    <button class="add-to-cart" data-price="10300" data-name="Set de entretenimiento rascador para gato">AÑADIR A CARRITO</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="Contacto">
+        <div class="DatosContacto">
+            <div class="Instagram">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <p>PatitasPetShop</p>
+            </div>
+            <div class="Facebook">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/facebook.png" alt="facebook"/>
+                <p>PatitasPetShop</p>
+            </div>
+            <div class="WhatsApp">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/whatsapp--v1.png" alt="whatsapp--v1"/>
+                <p>1155778899</p>
+            </div>
+        </div>
+        <h5>® Patitas Pet Shop Todos los derechos reservados</h5>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
